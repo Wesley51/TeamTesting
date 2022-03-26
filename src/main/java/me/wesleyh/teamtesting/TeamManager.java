@@ -32,6 +32,7 @@ public class TeamManager {
     public static void addPlayerToTeam(String name, Player p){
         for(Team team: teams){
             if (Objects.equals(team.name, name)) {
+                if (team.members.contains(p)) return;
                 team.members.add(p);
                 return;
             }
@@ -40,8 +41,18 @@ public class TeamManager {
     public static void addPlayerToTeam(Team t, Player p){
         for(Team team: teams){
             if (team.equals(t)){
+                if (team.members.contains(p)) return;
                 team.members.add(p);
+                return;
             }
         }
+    }
+    public static boolean isInTeam(Player p){
+        for(Team team: teams){
+            if (team.members.contains(p)){
+                return true;
+            }
+        }
+        return false;
     }
 }
