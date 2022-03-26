@@ -1,8 +1,0 @@
-name: TeamTesting
-version: 1.0
-main: me.wesleyh.teamtesting.TeamTesting
-api-version: 1.8
-commands:
-  team:
-    usage: /<command>
-    description: Team
