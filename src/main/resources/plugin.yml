@@ -1,0 +1,8 @@
+name: TeamTesting
+version: ${project.version}
+main: me.wesleyh.teamtesting.TeamTesting
+api-version: 1.8
+commands:
+  team:
+    usage: /<command>
+    description: Team
